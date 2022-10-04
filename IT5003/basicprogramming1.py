@@ -33,7 +33,7 @@ def t_6():
 
 def t_7():
     running_index = 0
-    visited_index = [running_index]
+    visited_index = {running_index}
     running_index = A[running_index]
 
     while running_index not in visited_index:
@@ -41,7 +41,7 @@ def t_7():
             return 'Out'
         elif running_index == N-1:
             return 'Done'
-        visited_index.append(running_index)
+        visited_index.add(running_index)
         running_index = A[running_index]
     return 'Cyclic'
 
