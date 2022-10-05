@@ -1,17 +1,18 @@
 players = int(input())
+
 BAGS_NEED_AFTER_FIRST_ROUND = 4
 
 def bagsOfPopcorn(players):
 
-  def sumNTerms(n):
-    return (n / 2) * (2 + (n -1))
+  def matches_per_group(size_per_group):
+    return size_per_group * (size_per_group-1) // 2
   
   def calculatePlayersPerGrp(players):
     return players // 4
 
-  playersPerGrp = calculatePlayersPerGrp(players)
+  size_per_group = calculatePlayersPerGrp(players)
 
-  bagsNeededInFirstRound = sumNTerms(playersPerGrp-1) * 4
+  bagsNeededInFirstRound = matches_per_group(size_per_group) * 4
 
   return bagsNeededInFirstRound + BAGS_NEED_AFTER_FIRST_ROUND
 print(int(bagsOfPopcorn(players)))
