@@ -1,3 +1,4 @@
+# Time complexity = O(1)
 players = int(input())
 
 BAGS_NEED_AFTER_FIRST_ROUND = 4
