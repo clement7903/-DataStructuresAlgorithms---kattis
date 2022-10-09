@@ -1,7 +1,7 @@
 userInput = input().split()
 N = int(userInput[0])
 t = int(userInput[1])
-A = list(map(lambda x : int(x)  , list(input().split())))
+A = list(map(int, list(input().split())))
 
 def t_1():
     return 7
