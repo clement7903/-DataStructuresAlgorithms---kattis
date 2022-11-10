@@ -7,9 +7,7 @@ d = set(input().split())
 for _ in range(n-1): #O(mn)
   current_list = set(input().split())
   appear_in_all = d.intersection(current_list) # O(min(len(appear_in_all), len(current_list)))
+  d = appear_in_all
 print(len(appear_in_all))
 for item in sorted(appear_in_all):
   print(item)
-
-
-
